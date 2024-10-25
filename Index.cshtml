@@ -1,0 +1,195 @@
+﻿@model Interesse
+@{
+    ViewData["Title"] = "Hotsite";
+}
+
+
+
+<div class="row mt-5">
+    <div class="col-6">
+        <h1>Iniciativa Saúde da Cidade</h1>
+        <p>
+            Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+        </p>
+        <p>
+            Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+        </p>
+    </div>
+
+    <div class="col-6">
+        <img class="img-fluid" src="~/img/vidasaudavel.jpg" alt="">
+    </div>
+
+</div>
+
+<div class="row mt-5">
+
+    <div class="col-6 border pr-4" id="form">
+        <h2>Entre em contato!</h2>
+        <p>Fique por dentro de nossos eventos</p>
+
+        <form class="form-group" method="POST" id="formCadastro">
+            <div class="row">
+                <label class="col-2" asp-for="Nome">Nome:</label>
+                <input class="col-10 mb-2 form-control" asp-for="Nome" id="nome" />
+            </div>
+            <div class="row">
+                <label class="col-2" asp-for="Email">Email:</label>
+                <input class="col-10 mb-2 form-control" asp-for="Email" id="email" />
+            </div>
+            <div class="row">
+                <label class="col-2 " asp-for="Mensagem">Mensagem (opcional):</label>
+                <textarea class="col-10 mb-2 form-control" asp-for="Mensagem" id="mensagem"></textarea>
+            </div>
+            <div>
+                <input class="btn btn-primary mt-2 mb-2 float-right" type="submit" value="Enviar" id="enviar" />
+            </div>
+        </form>
+    </div>
+
+    <div class="col-6">
+        <div class="row">
+            <div class="col-4 align-self-center">
+                <img class="img-fluid" src="~/img/agenda.jpg" alt="">
+                <a href="#" data-toggle="modal" data-target="#agendaModal">Agenda de eventos</a>
+            </div>
+
+            <div class="modal fade" id="agendaModal" tabindex="-1" role="dialog" aria-labelledby="agendaModal"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="agendaModal">Agenda de Eventos</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>08/09/2030 09:00 - Primeiro Evento</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique officiis esse ipsa
+                                quisquam aliquid dolore nesciunt dolores ad voluptate quibusdam?</p>
+                            <h4>08/09/2030 12:00 - Segundo Evento</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta enim iste vel sit
+                                numquam, id architecto eaque similique ut beatae!</p>
+                            <h4>08/09/2030 14:00 - Terceiro Evento</h4>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit enim dolor
+                                laboriosam natus temporibus, quas rem vero fugit nisi molestias?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 align-self-center">
+                <img class="img-fluid" src="~/img/lampada.jpg" alt="">
+                <a href="#" data-toggle="modal" data-target="#dicasModal">Dicas de vida saudável</a>
+            </div>
+
+            <div class="modal fade" id="dicasModal" tabindex="-1" role="dialog" aria-labelledby="dicasModal"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="dicasModal">Dicas Vida Saudável</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>1. Dormir bem
+                                Assim como se alimentar e praticar exercícios são essenciais para uma vida saudável,
+                                dormir
+                                não é diferente. O sono é o momento de repouso do organismo, em que o cérebro se livra
+                                de
+                                resíduos para poder revigorar suas energias. E a privação dele contribui para o aumento
+                                do
+                                nível de stress, falta de memória, de atenção e de concentração. São necessárias de 6 a
+                                8
+                                horas de sono ao dia para que, a pessoa ao acordar, esteja descansada e recobre a
+                                energia
+                                para mais um dia.
+                            </p>
+                            <p>
+                                2. Beber água
+                                Aproximadamente dois terços do nosso corpo são compostos por água. Ela transporta os
+                                nutrientes, o oxigênio e auxilia na produção de energia. Consumir água faz uma enorme
+                                diferença no nosso organismo, especialmente às pessoas que abusam do sódio na
+                                alimentação.
+                                Lembrando que equilíbrio fundamental e tudo que é em excesso faz mal, inclusive a água.
+                                Portanto a média de consumo ideal para uma pessoa saudável fica entre 1,5 a 2 litros de
+                                água
+                                por dia.
+                            </p>
+                            <p>
+                                3. Praticar exercícios físicos
+                                A atividade física regular não ajuda somente a manter corpo saudável e bonito
+                                esteticamente,
+                                mas é fundamental na prevenção de várias patologias. De nada adianta uma alimentação
+                                regrada, se o corpo permanece parado. Hoje em dia, existem diversos tipos de exercícios
+                                físicos, são muitas opções, é só escolher o que mais agradar!
+                            </p>
+                            <p>
+                                4. Dedicar tempo para fazer o que gosta
+                                Fazer amigos, sair, rir, namorar, ter relações sexuais, são coisas que fazem bem.
+                                Liberam a
+                                ocitocina, que reduz a tensão arterial e o stress. Ela é a chave para a felicidade das
+                                pessoas, está diretamente relacionada à criação de laços sociais.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4 align-self-center">
+                <img class="img-fluid" src="~/img/apoio.jpg" alt="">
+                <a href="#" data-toggle="modal" data-target="#apoioModal">Apoiadores</a>
+            </div>
+
+            <div class="modal fade" id="apoioModal" tabindex="-1" role="dialog" aria-labelledby="apoioModal"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="apoioModal">Apoiadores</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <i class="fa-brands fa-linkedin col-1"></i>
+                                <h4 class="col-10">Linkedin</h4>
+                            </div>
+                            <p>A plataforma possui foco em networking e conexões profissionais, mas apresenta opções e
+                                recursos para diferentes grupos de pessoas: donos de empresas, profissionais e
+                                recrutadores podem aproveitar vantagens</p>
+
+                            <div class="row">
+                                <i class="fa-brands fa-microsoft col-1"></i>
+                                <h4 class="col-10">MicroSoft</h4>
+                            </div>
+                            <p>A Microsoft, palavra proveniente da junção de “microscopic” e “software” é atualmente a
+                                maior e mais conhecida empresa desenvolvedora de softwares e recursos tecnológicos do
+                                mundo. Criada em 1975 por Bill Gates e Paul Allen, a empresa foi criada inicialmente
+                                para comercializar interpretadores da linguagem BASIC.</p>
+                            <div class="row">
+                                <i class="fa-brands fa-apple col-1"></i>
+                                <h4 class="col-10">Apple</h4>
+                            </div>
+                            <p>A Apple é uma das maiores empresas de tecnologia do planeta. Ela foi fundada no dia 1º de
+                                abril de 1976 por Steve Wozniak, Steve Jobs e Ronald Wayne a fim de começar a produzir e
+                                vender seu primeiro produto: o computador Apple I, criado por Wozniak. </p>
+                            <div class="row">
+                                <i class="fa-brands fa-youtube col-1"></i>
+                                <h4 class="col-10">YouTube</h4>
+                            </div>
+                            <p>Uma plataforma de videos onde pessoas podem compartilhar suas histórias e experiências e
+                                empresas podem mostrar o seu produto em video.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
