@@ -1,195 +1,136 @@
-@model Interesse
-@{
-    ViewData["Title"] = "Hotsite";
-}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="bootstrap.min.css" />
+  <link rel="stylesheet" href="site.css" asp-append-version="true" />
+</head>  
 
+<body>
 
-
-<div class="row mt-5">
+<div class="container">
+  <div class="row mb-4 p-2">
     <div class="col-6">
-        <h1>Iniciativa Saúde da Cidade</h1>
-        <p>
-            Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-        </p>
-        <p>
-            Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-        </p>
+
+      <h3>Iniciativa Saúde da Cidade</h3>
+      <p>
+        <h5>Texto sobre vida saudável:</h5>
+        <h5> Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.</h5>
+      </p>
+
+      <p>
+        <h5>Texto sobre vida iniciativa:</h5>
+        <h5> Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.</h5>
+      </p>
+
     </div>
 
     <div class="col-6">
-        <img class="img-fluid" src="~/img/vidasaudavel.jpg" alt="">
+      <div class="border-container">
+        <img src="https://media.istockphoto.com/id/1363588189/pt/foto/healthy-lifestyle-on-ketogenic-diet-eating-clean-keto-food-good-health-dietary-in-heart-dish.jpg?s=1024x1024&w=is&k=20&c=21Cr42ZUDwGR1cfnkJ9_MbUHQXYJft9gscFo8PRZsKU=" class="img-fluid" alt="Descrição da imagem" width="600" height="400">
+      </div>
     </div>
+  </div>
 
+<div class="row justify-content-around">
+    <div class="col-md-4 border-container my-3">
+        <h5>Entre em contato!</h5>
+        <p><h7>Nos mande uma mensagem e fique por dentro de nossos eventos</h7></p>
+
+      <form id="meuFormulario" method="POST">
+<div class="form-group">
+    <label asp-for="Nome">Nome:</label>
+    <input asp-for="Nome" class="form-control" />
 </div>
 
-<div class="row mt-5">
+<div class="form-group">
+    <label asp-for="Email">Email:</label>
+    <input asp-for="Email" class="form-control" />
+</div>
 
-    <div class="col-6 border pr-4" id="form">
-        <h2>Entre em contato!</h2>
-        <p>Fique por dentro de nossos eventos</p>
+<div class="form-group">
+    <label asp-for="Mensagem">Mensagem (opcional):</label>
+    <textarea asp-for="Mensagem" class="form-control"></textarea>
+</div>
 
-        <form class="form-group" method="POST" id="formCadastro">
-            <div class="row">
-                <label class="col-2" asp-for="Nome">Nome:</label>
-                <input class="col-10 mb-2 form-control" asp-for="Nome" id="nome" />
-            </div>
-            <div class="row">
-                <label class="col-2" asp-for="Email">Email:</label>
-                <input class="col-10 mb-2 form-control" asp-for="Email" id="email" />
-            </div>
-            <div class="row">
-                <label class="col-2 " asp-for="Mensagem">Mensagem (opcional):</label>
-                <textarea class="col-10 mb-2 form-control" asp-for="Mensagem" id="mensagem"></textarea>
-            </div>
-            <div>
-                <input class="btn btn-primary mt-2 mb-2 float-right" type="submit" value="Enviar" id="enviar" />
-            </div>
-        </form>
+<div class="form-group text-right">
+    <input type="submit" value="Enviar" class="btn btn-primary" />
+</div>        
+</form>
     </div>
 
-    <div class="col-6">
-        <div class="row">
-            <div class="col-4 align-self-center">
-                <img class="img-fluid" src="~/img/agenda.jpg" alt="">
-                <a href="#" data-toggle="modal" data-target="#agendaModal">Agenda de eventos</a>
-            </div>
-
-            <div class="modal fade" id="agendaModal" tabindex="-1" role="dialog" aria-labelledby="agendaModal"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="agendaModal">Agenda de Eventos</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <h4>08/09/2030 09:00 - Primeiro Evento</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique officiis esse ipsa
-                                quisquam aliquid dolore nesciunt dolores ad voluptate quibusdam?</p>
-                            <h4>08/09/2030 12:00 - Segundo Evento</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta enim iste vel sit
-                                numquam, id architecto eaque similique ut beatae!</p>
-                            <h4>08/09/2030 14:00 - Terceiro Evento</h4>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit enim dolor
-                                laboriosam natus temporibus, quas rem vero fugit nisi molestias?</p>
-                        </div>
+    <div class="col-md-2 text-center my-3">
+        <div class="border-container">
+            <img src="https://campussvp.furg.br/images/_visual.ID/square_logos/eventos_square.png" alt="Imagem 1" class="img-fluid" width="100" height="300">
                     </div>
-                </div>
+            <a href="#" onclick="openPopup('popup1')">Agenda de Eventos</a>
+    </div>
+
+
+        <div class="col-md-2 text-center my-3">
+            <div class="border-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/3771/3771432.png" alt="Imagem 2" class="img-fluid" width="100" height="300">
             </div>
+            <a href="#" onclick="openPopup('popup2')">Dicas de vida saudável</a>
+        </div>
 
-            <div class="col-4 align-self-center">
-                <img class="img-fluid" src="~/img/lampada.jpg" alt="">
-                <a href="#" data-toggle="modal" data-target="#dicasModal">Dicas de vida saudável</a>
+        <div class="col-md-2 text-center my-3">
+            <div class="border-container">
+                <img src="https://img.freepik.com/vetores-premium/servico-de-suporte-ao-cliente-trabalhadores-do-call-center-assistente-online-24-horas-assistente-do-chatbot-consumidor-e-operador-de-linha-direta-o-apoiador-da-mulher-ajuda-o-cliente-ilustracao-em-vetor-cartoon-plana-isolada_533410-287.jpg?w=2000" alt="Imagem 3" class="img-fluid" width="100" height="300">
             </div>
+            <a href="#" onclick="openPopup('popup3')">Apoiadores</a>
+        </div>
 
-            <div class="modal fade" id="dicasModal" tabindex="-1" role="dialog" aria-labelledby="dicasModal"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="dicasModal">Dicas Vida Saudável</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <p>1. Dormir bem
-                                Assim como se alimentar e praticar exercícios são essenciais para uma vida saudável,
-                                dormir
-                                não é diferente. O sono é o momento de repouso do organismo, em que o cérebro se livra
-                                de
-                                resíduos para poder revigorar suas energias. E a privação dele contribui para o aumento
-                                do
-                                nível de stress, falta de memória, de atenção e de concentração. São necessárias de 6 a
-                                8
-                                horas de sono ao dia para que, a pessoa ao acordar, esteja descansada e recobre a
-                                energia
-                                para mais um dia.
-                            </p>
-                            <p>
-                                2. Beber água
-                                Aproximadamente dois terços do nosso corpo são compostos por água. Ela transporta os
-                                nutrientes, o oxigênio e auxilia na produção de energia. Consumir água faz uma enorme
-                                diferença no nosso organismo, especialmente às pessoas que abusam do sódio na
-                                alimentação.
-                                Lembrando que equilíbrio fundamental e tudo que é em excesso faz mal, inclusive a água.
-                                Portanto a média de consumo ideal para uma pessoa saudável fica entre 1,5 a 2 litros de
-                                água
-                                por dia.
-                            </p>
-                            <p>
-                                3. Praticar exercícios físicos
-                                A atividade física regular não ajuda somente a manter corpo saudável e bonito
-                                esteticamente,
-                                mas é fundamental na prevenção de várias patologias. De nada adianta uma alimentação
-                                regrada, se o corpo permanece parado. Hoje em dia, existem diversos tipos de exercícios
-                                físicos, são muitas opções, é só escolher o que mais agradar!
-                            </p>
-                            <p>
-                                4. Dedicar tempo para fazer o que gosta
-                                Fazer amigos, sair, rir, namorar, ter relações sexuais, são coisas que fazem bem.
-                                Liberam a
-                                ocitocina, que reduz a tensão arterial e o stress. Ela é a chave para a felicidade das
-                                pessoas, está diretamente relacionada à criação de laços sociais.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-4 align-self-center">
-                <img class="img-fluid" src="~/img/apoio.jpg" alt="">
-                <a href="#" data-toggle="modal" data-target="#apoioModal">Apoiadores</a>
-            </div>
+<div id="popup1" class="popup">
+    <span class="close" onclick="closePopup('popup1')">&times;</span>
+    <h2>Agenda</h2>
+    <p>10/10/10 10:10 - Evento 1</p>
+    <p> Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.</p>
+</div>
 
-            <div class="modal fade" id="apoioModal" tabindex="-1" role="dialog" aria-labelledby="apoioModal"
-                aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="apoioModal">Apoiadores</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <i class="fa-brands fa-linkedin col-1"></i>
-                                <h4 class="col-10">Linkedin</h4>
-                            </div>
-                            <p>A plataforma possui foco em networking e conexões profissionais, mas apresenta opções e
-                                recursos para diferentes grupos de pessoas: donos de empresas, profissionais e
-                                recrutadores podem aproveitar vantagens</p>
+<div id="popup2" class="popup">
+    <span class="close" onclick="closePopup('popup2')">&times;</span>
+     <h2>Dicas de vida saudável</h2>
+    <p>Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.</p>
+</div>
 
-                            <div class="row">
-                                <i class="fa-brands fa-microsoft col-1"></i>
-                                <h4 class="col-10">MicroSoft</h4>
-                            </div>
-                            <p>A Microsoft, palavra proveniente da junção de “microscopic” e “software” é atualmente a
-                                maior e mais conhecida empresa desenvolvedora de softwares e recursos tecnológicos do
-                                mundo. Criada em 1975 por Bill Gates e Paul Allen, a empresa foi criada inicialmente
-                                para comercializar interpretadores da linguagem BASIC.</p>
-                            <div class="row">
-                                <i class="fa-brands fa-apple col-1"></i>
-                                <h4 class="col-10">Apple</h4>
-                            </div>
-                            <p>A Apple é uma das maiores empresas de tecnologia do planeta. Ela foi fundada no dia 1º de
-                                abril de 1976 por Steve Wozniak, Steve Jobs e Ronald Wayne a fim de começar a produzir e
-                                vender seu primeiro produto: o computador Apple I, criado por Wozniak. </p>
-                            <div class="row">
-                                <i class="fa-brands fa-youtube col-1"></i>
-                                <h4 class="col-10">YouTube</h4>
-                            </div>
-                            <p>Uma plataforma de videos onde pessoas podem compartilhar suas histórias e experiências e
-                                empresas podem mostrar o seu produto em video.</p>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div id="popup3" class="popup">
+    <span class="close" onclick="closePopup('popup3')">&times;</span>
+    <h2>Apoiadores</h2>
+    <div class="popup-content">
+        <img src="https://investidorsardinha.r7.com/wp-content/uploads/2021/02/tipos-de-empresas-2.jpg" alt="" width="200" height="100">
+        <div class="popup-text">
+            <h2>Empresa 1</h2>
+            <p>Descrição</p>
         </div>
     </div>
 
+    <div class="popup-content">
+        <img src="https://investidorsardinha.r7.com/wp-content/uploads/2021/02/tipos-de-empresas-2.jpg" alt="" width="200" height="100">
+        <div class="popup-text">
+            <h2>Empresa 2</h2>
+            <p>Descrição</p>
+        </div>
+    </div>
+
+    <div class="popup-content">
+        <img src="https://investidorsardinha.r7.com/wp-content/uploads/2021/02/tipos-de-empresas-2.jpg" alt="" width="200" height="100">
+        <div class="popup-text">
+            <h2>Empresa 3</h2>
+            <p>Descrição</p>
+        </div>
+    </div>
 </div>
+
+<div class="overlay" id="overlay" onclick="closeAllPopups()"></div>
+
+    <link rel="stylesheet" href="bootstrap.min.js" />
+  <link rel="stylesheet" href="jquery.min.js/>
+  <link rel="stylesheet" href="site.js" />
+
+
+
+</body>
+</html>
